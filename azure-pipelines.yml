@@ -2,7 +2,7 @@ trigger:
 - '*'
 
 variables:
-  buildConfiguration: 'ReleaseAcr'
+  buildConfiguration: 'Release-acr'
   webRepository: 'web'
   tag: '$(Build.BuildId)'
 
@@ -34,7 +34,7 @@ stages:
     pool:
       vmImage: 'ubuntu-16.04'
     variables:
-    - group: ReleaseAcr
+    - group: Release-acr
     steps:
     - task: AzureWebAppContainer@1
       inputs:
